@@ -1,0 +1,26 @@
+{
+  "version": "2026.09.28",
+  "files": {
+    "life.wasm": {
+      "bytes": 204126,
+      "sha256": "6deffb6e031e6caf3569da9dfb548030ea3da426211c2cfa121feed40a176c9c"
+    },
+    "index.html": {
+      "bytes": 6783,
+      "sha256": "c04d506846a9f330417c6feb86e881d40b6a86bbe8f7d0906823d76b4bcbaa55"
+    },
+    "life.data": {
+      "bytes": 12602577,
+      "sha256": "a52ed25a1dd2342ef386b463858ea381d4d23ab2eff27c343debafa731f7edbd"
+    },
+    "THIRD_PARTY_NOTICES.txt": {
+      "bytes": 6242,
+      "sha256": "8b362642dbd19dfef66c9ac2ba727b6d56d2db9e70fd51f435c6adbf79b92384"
+    },
+    "life.js": {
+      "bytes": 121550,
+      "sha256": "dcf4a4f9ce8376010f6c387d2b41cbdd5371ab518f2581d1c3fa9bef1ad5f659"
+    }
+  },
+  "engine_source": "https://github.com/abyssband/abyss-engine/tree/824c73c"
+}
