@@ -4,7 +4,7 @@
 
 #loading{position:absolute;inset:0;z-index:3;display:grid;place-content:center;text-align:center;gap:16px;padding:24px;background:#172427f2;backdrop-filter:blur(4px)}#loading[hidden]{display:none}.spinner{width:42px;height:42px;border:3px solid #688a7755;border-top-color:#c4dab2;border-radius:50%;margin:auto;animation:spin 1s linear infinite}#loading.failed .spinner{display:none}#loading progress{width:min(320px,70vw);accent-color:#c4dab2;margin:auto}#loading p{margin:0;color:#bed0c7;max-width:420px;overflow-wrap:anywhere}#retry[hidden]{display:none}@keyframes spin{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.spinner{animation:none;border-top-color:#c4dab2}}
 </style>
-<header><div><h1><span data-i18n="title"></span> <small data-i18n="preview"></small><small> · 2026.09.28.2</small></h1><div id="stats"></div></div><div class="settings"><select id="language" aria-label="Language / 語言"><option value="zh-Hant">繁體中文</option><option value="zh-Hans">简体中文</option><option value="en">English</option></select><select id="quality" data-label="quality"><option value="1.5" data-i18n="balanced"></option><option value="1" data-i18n="battery"></option><option value="2" data-i18n="crisp"></option></select></div></header>
+<header><div><h1><span data-i18n="title"></span> <small data-i18n="preview"></small><small> · 2026.09.28.3</small></h1><div id="stats"></div></div><div class="settings"><select id="language" aria-label="Language / 語言"><option value="zh-Hant">繁體中文</option><option value="zh-Hans">简体中文</option><option value="en">English</option></select><select id="quality" data-label="quality"><option value="1.5" data-i18n="balanced"></option><option value="1" data-i18n="battery"></option><option value="2" data-i18n="crisp"></option></select></div></header>
 <div id="stage" aria-busy="true"><canvas id="canvas" data-label="canvas"></canvas><pre id="hud"></pre><div id="status"></div><div id="loading" role="status" aria-live="polite"><div class="spinner" aria-hidden="true"></div><strong id="load-title"></strong><progress id="load-progress" data-label="loading"></progress><p id="load-detail"></p><button id="retry" data-i18n="retry" hidden></button></div></div>
 <nav id="controls" data-label="controls"><button data-c="0"></button><button data-c="1"></button><button data-c="2"></button><button data-c="20"></button><button data-c="21"></button><button data-c="22"></button><button data-c="23"></button><button data-c="30"></button><button data-c="4"></button><button data-c="10"></button><button data-c="6"></button><button data-c="7"></button><button data-c="5"></button><a href="../../" style="align-self:center;color:#c0d2c9">AbyssGames</a><a href="https://github.com/abyssband/abyssgames/issues" target="_blank" rel="noopener" style="align-self:center;color:#c0d2c9" data-i18n="report"></a></nav><div id="error" role="alert"></div>
 <script src="locale.js"></script>
@@ -22,6 +22,15 @@ function renderLoading(){
  progress.hidden=!!loadFailure;loading.classList.toggle('failed',!!loadFailure);document.querySelector('#retry').hidden=!loadFailure;
 }
 function fail(e){error.textContent=String(e);if(!loadingFinished){loadFailure=String(e);renderLoading();}}
+// Emscripten's dependency watchdog and streaming fallback are recoverable
+// diagnostics, not failed loads. Keep them in the console for investigation.
+function runtimeDiagnostic(message){
+ const text=String(message);
+ if(text==='still waiting on run dependencies:'||text==='(end of list)'||text.startsWith('dependency: ')||text.startsWith('wasm streaming compile failed: ')||text==='falling back to ArrayBuffer instantiation'){
+  console.warn(text);return;
+ }
+ fail(text);
+}
 function updateLoad(message){const match=String(message).match(/([0-9]+)\/([0-9]+)/);if(match){loadPhase='downloading';loadBytes=[Number(match[1]),Number(match[2])];}else if(/Running|Preparing/.test(message)){loadPhase='initializing';loadBytes=null;}renderLoading();}
 applyLocale();renderLoading();stats.textContent=tr('loading');
 document.querySelector('#language').onchange=e=>{locale=e.target.value;try{localStorage.setItem('abyss-preview-language',locale);}catch{}applyLocale();renderLoading();lastHud=0;};
@@ -29,7 +38,7 @@ document.querySelector('#retry').onclick=()=>location.reload();
 window.addEventListener('unhandledrejection',e=>fail(e.reason?.message||e.reason));
 window.addEventListener('error',e=>{if(e.message)fail(e.message);});
 function persist(){if(!booted)return;try{const bytes=Module.FS.readFile('/journey.json',{encoding:'utf8'});if(bytes!==persisted){localStorage.setItem(SAVE,bytes);persisted=bytes;}storageError='';}catch(e){storageError=tr('saveError');fail(storageError+': '+e.message);}}
-var Module={canvas,setStatus:updateLoad,preRun:[()=>{try{const saved=localStorage.getItem(SAVE);if(saved){Module.FS.writeFile('/journey.json',saved);persisted=saved;}}catch(e){fail(tr('readError')+': '+e.message);}}],onRuntimeInitialized:()=>{booted=true;loadPhase='initializing';loadBytes=null;renderLoading();},printErr:fail,onAbort:fail};
+var Module={canvas,setStatus:updateLoad,preRun:[()=>{try{const saved=localStorage.getItem(SAVE);if(saved){Module.FS.writeFile('/journey.json',saved);persisted=saved;}}catch(e){fail(tr('readError')+': '+e.message);}}],onRuntimeInitialized:()=>{booted=true;loadPhase='initializing';loadBytes=null;renderLoading();},printErr:runtimeDiagnostic,onAbort:fail};
 function resize(){const r=canvas.getBoundingClientRect(),dpr=Math.min(devicePixelRatio||1,Number(document.querySelector('#quality').value));canvas.width=Math.max(1,Math.round(r.width*dpr));canvas.height=Math.max(1,Math.round(r.height*dpr));}
 new ResizeObserver(resize).observe(canvas);document.querySelector('#quality').onchange=resize;
 document.querySelectorAll('[data-c]').forEach(b=>b.onclick=()=>{Module._web_control(Number(b.dataset.c));persist();});

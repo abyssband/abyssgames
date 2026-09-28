@@ -1,13 +1,13 @@
 {
-  "version": "2026.09.28.2",
+  "version": "2026.09.28.3",
   "files": {
     "life.wasm": {
       "bytes": 204126,
       "sha256": "6deffb6e031e6caf3569da9dfb548030ea3da426211c2cfa121feed40a176c9c"
     },
     "index.html": {
-      "bytes": 9712,
-      "sha256": "0f00675e8518d6a5a1e4a21bef8d9d780b2b50dda5d71f622eab659cf72ffb76"
+      "bytes": 10202,
+      "sha256": "e178f1293723cb7251506024eb5ea8e1d87f5a47adbc165d5cf92718bdb9dc66"
     },
     "life.data": {
       "bytes": 12602577,
@@ -26,5 +26,5 @@
       "sha256": "37318178e85232f3ca5c2b448b58c064db949402f3dea2e21ed01df336e508cd"
     }
   },
-  "engine_source": "https://github.com/abyssband/abyss-engine/tree/5c34942"
+  "engine_source": "https://github.com/abyssband/abyss-engine/tree/2bc0c8f"
 }
