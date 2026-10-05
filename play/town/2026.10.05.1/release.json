@@ -1,0 +1,34 @@
+{
+  "version": "2026.10.05.1",
+  "engine_source_revision": "228d4504fef3e5a7c8feadaf61d71d16a763f061",
+  "runtime": "WebGL 2 / WebAssembly",
+  "objects": 510,
+  "ui": "Abyss UI Maker + Behavior",
+  "scope": "Town imaging preview; full gameplay and performance acceptance remain pending",
+  "files": {
+    "THIRD_PARTY_NOTICES.txt": {
+      "bytes": 12395,
+      "sha256": "469235ad08a92d8635715b4c9dddc150d622938b45c85aa68ce6ae459fe1ea93"
+    },
+    "index.html": {
+      "bytes": 750,
+      "sha256": "7a52533686a93d90db033810a08f13048fba590706edeb9104fe0b99b935df2c"
+    },
+    "shell.js": {
+      "bytes": 6668,
+      "sha256": "d4f0666aef092efac3806f90b2f61841ce879013629192d7f0e8e06a656ec3c7"
+    },
+    "town.data": {
+      "bytes": 69985895,
+      "sha256": "47793235f6976983faa2fbb038e8a74aca7f95d2d018795d506ebfe907ca9de9"
+    },
+    "town.js": {
+      "bytes": 159031,
+      "sha256": "f8a9d273441ac97d0aabc063fe70dd5c35002c8fdf9356260ca85c2122c19dbc"
+    },
+    "town.wasm": {
+      "bytes": 297711,
+      "sha256": "881820540cda935517e3edbfad89bdc933dcdaf67c30e6962b4aa684a2ce754b"
+    }
+  }
+}

@@ -25,3 +25,13 @@ Copyright © 2026 Ting Feng Chou (周庭峰). All rights reserved.
 The preview supports WebGL 2 browsers, including iPad Safari. Saves stay in localStorage on this origin and are separate from local development saves. The FPS HUD is a short rolling browser measurement, not a GPU or thermal benchmark. MuJoCo physics is not included. Models/art are provided for this preview under the site's existing copyright; third-party runtime notices are in the preview directory.
 
 Version 2026.09.28.2 adds browser-language detection and a persistent Traditional Chinese / Simplified Chinese / English selector. The loading overlay follows actual asset download progress and scene readiness, supports reduced motion, and offers retry on download failure. Technical diagnostics retain their original repair details.
+
+## Town renderer preview
+
+`play/town/2026.10.05.1/` is a versioned WebGL 2 town imaging release. Source
+remains in Abyss Engine / Forge revision `228d4504fef3e5a7c8feadaf61d71d16a763f061`.
+Every visible application control/readout uses UI Maker and Behavior; the HTML
+shell hosts canvases only. `release.json` records exact public file hashes.
+The release contains no source maps, development receipts, local saves or unused
+C/header/Abyss authoring sources. Performance acceptance and full gameplay remain
+pending. Update this versioned path only by an explicit replacement release.
