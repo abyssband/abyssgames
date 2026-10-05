@@ -1,0 +1,54 @@
+{
+  "version": "2026.10.05.4",
+  "source_revision": "8cb47be4b0eb6eca4ef0cf98c62fb1864fc11c4e",
+  "runtime": "WebGL2 / WebAssembly / C Behavior / Jolt5.6.0",
+  "objects": 405,
+  "models": 100,
+  "actors": 5,
+  "ui": "Abyss UI Maker",
+  "controls": {
+    "player": "resident-02",
+    "locale": "en",
+    "speed_multiplier": 2,
+    "camera_zoom": [
+      0.48,
+      0.34,
+      0.24
+    ]
+  },
+  "scope": "Outdoor interactive preview; interior entry, paired assistance, audio and physical mobile acceptance pending.",
+  "files": {
+    "shell.js": {
+      "bytes": 8076,
+      "sha256": "76698c1d642e119ad3c44e879a5f54a3785f4c664295159b8a5af58e6fe84804"
+    },
+    "index.html": {
+      "bytes": 708,
+      "sha256": "2b021901a70399252de05cf804b56ef92c2f1e3165b7db9f6b25cc502f1f23b1"
+    },
+    "town.wasm": {
+      "bytes": 1366616,
+      "sha256": "c5068c2e6d17469cc71b15dc4aba0bb95959bc70b9329f6dfd5325f233f6c808"
+    },
+    "boot-config.js": {
+      "bytes": 178696,
+      "sha256": "c4c0deaea64038670a49d7a39a014af5eaef74945d73e5ef82a2524fea8b0b02"
+    },
+    "town.js": {
+      "bytes": 152245,
+      "sha256": "f512e5288f8c073e536d54cdfcccfcf2b2c1a05b4ced8dcbccdd3b7a5e675575"
+    },
+    "THIRD_PARTY_NOTICES.txt": {
+      "bytes": 13431,
+      "sha256": "3e99397a8bb2d4210233ef7b32e078c1dc884fbe4b67d11767174cf323244855"
+    },
+    "town.data": {
+      "bytes": 56083068,
+      "sha256": "9c61ba8d8582133c54df5c6de51e1341bad6113aecfa46ed580bd0ebbac582a2"
+    },
+    "loader.js": {
+      "bytes": 6615,
+      "sha256": "523e1e52af21da729c213ee3fc8035a5c2f6ec739567c9feff1df7dbc04fb194"
+    }
+  }
+}

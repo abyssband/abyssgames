@@ -57,3 +57,18 @@ Chromium and WebKit each passed 9 startup and 17 gameplay checks. Physical mobil
 acceptance and sustained performance measurements remain pending. Packaging and
 verified caching follow the existing `docs/release/web-town.md` engine runbook;
 `release.json` binds all eight public runtime files. Older version URLs stay intact.
+
+## Town controls update
+
+`play/town/2026.10.05.4/` uses Forge source
+`8cb47be4b0eb6eca4ef0cf98c62fb1864fc11c4e`. The playable shirt/trousers
+appearance uses the same common human controller. English is the default; the
+menu still offers Traditional Chinese. Player walking/running is twice as fast.
+Esc offers Close (the previous distance), Medium and Far camera presets. Ground
+click routes round obstacle corners with collision-checked segments and slow
+down at arrival, rather than at every bend. Player commands take priority over
+new ambient chats. The existing outdoor-preview limitations still apply.
+
+Chromium and WebKit passed 19 gameplay checks each; native Debug CTest passed
+both town and navigation tests. Runtime packages and test revisions are recorded
+in the retained engine release evidence. Older version URLs stay intact.
