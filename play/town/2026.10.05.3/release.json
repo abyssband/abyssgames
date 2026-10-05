@@ -1,0 +1,44 @@
+{
+  "version": "2026.10.05.3",
+  "source_revision": "be1066da2a05f167cbb799cd40b95114e220f44b",
+  "runtime": "WebGL 2 / WebAssembly / C Behavior / Jolt 5.6.0",
+  "objects": 405,
+  "models": 100,
+  "actors": 5,
+  "ui": "Abyss UI Maker",
+  "scope": "Outdoor interactive preview: movement, selection, conversation, pet follow/wait, jump/fall/recover, pause, Traditional Chinese/English and Low/Balance/Quality. Interior entry, paired assistance and audio pending. Desktop browser verified; physical mobile acceptance pending.",
+  "files": {
+    "index.html": {
+      "bytes": 708,
+      "sha256": "2b021901a70399252de05cf804b56ef92c2f1e3165b7db9f6b25cc502f1f23b1"
+    },
+    "shell.js": {
+      "bytes": 8076,
+      "sha256": "76698c1d642e119ad3c44e879a5f54a3785f4c664295159b8a5af58e6fe84804"
+    },
+    "loader.js": {
+      "bytes": 6615,
+      "sha256": "523e1e52af21da729c213ee3fc8035a5c2f6ec739567c9feff1df7dbc04fb194"
+    },
+    "boot-config.js": {
+      "bytes": 178696,
+      "sha256": "4a430de8992ef4b1b5fc0e140b809fc70bd20c6a6adfeafc08531a92c5feaa17"
+    },
+    "town.js": {
+      "bytes": 152245,
+      "sha256": "d71b39720a9044139127e30c535c2e41b0e22affa2c40cbdb75270a063123b23"
+    },
+    "town.wasm": {
+      "bytes": 1362026,
+      "sha256": "2eef2996805c2d17943e688b767f19797eb7f12aac5d9e6eeccb03c1a70099cb"
+    },
+    "town.data": {
+      "bytes": 56080135,
+      "sha256": "00361a17d4fb3d15652e7c7c1017ba2613230c2e769da84e56c2aee531aad4f5"
+    },
+    "THIRD_PARTY_NOTICES.txt": {
+      "bytes": 13431,
+      "sha256": "3e99397a8bb2d4210233ef7b32e078c1dc884fbe4b67d11767174cf323244855"
+    }
+  }
+}

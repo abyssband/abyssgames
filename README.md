@@ -42,3 +42,18 @@ uploads yield between batches. A verified cache holds one package, at most
 96 MiB decoded, keyed by both WASM/data hashes; denied storage or eviction falls
 back to HTTP. Cache access does not touch player saves. Initial delivery still
 uses GitHub Pages gzip. The previous version remains at its versioned URL.
+
+## Town interactive preview
+
+`play/town/2026.10.05.3/` uses Forge source
+`be1066da2a05f167cbb799cd40b95114e220f44b`. Its 405-object town contains
+five independent actors using shared C/Behavior gameplay and Jolt movement.
+Click the ground to walk or an actor to interact. WASD moves, Shift runs,
+Space jumps, F falls, R recovers, and Esc pauses. The menu switches Traditional
+Chinese/English and Low/Balance/Quality. Pet follow/wait and resident conversation
+use actual world state. Interior entry, paired assistance and audio are pending.
+
+Chromium and WebKit each passed 9 startup and 17 gameplay checks. Physical mobile
+acceptance and sustained performance measurements remain pending. Packaging and
+verified caching follow the existing `docs/release/web-town.md` engine runbook;
+`release.json` binds all eight public runtime files. Older version URLs stay intact.
