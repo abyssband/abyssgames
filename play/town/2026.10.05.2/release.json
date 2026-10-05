@@ -1,0 +1,42 @@
+{
+  "version": "2026.10.05.2",
+  "engine_source_revision": "aa84f2438c16e3697b3fabcffdf616e4cd80077f",
+  "runtime": "WebGL 2 / WebAssembly",
+  "objects": 510,
+  "ui": "Abyss UI Maker + Behavior; bootstrap atlas exported by in-tree UI Maker",
+  "scope": "Town imaging preview with loading progress, retry, staged initialization and verified bounded cache. Full gameplay and physical mobile performance acceptance remain pending.",
+  "files": {
+    "shell.js": {
+      "bytes": 6783,
+      "sha256": "0c2b60829b8efbaeac087b382a13c17277d195d8a4463d657cebeeb812b80d6d"
+    },
+    "index.html": {
+      "bytes": 708,
+      "sha256": "2b021901a70399252de05cf804b56ef92c2f1e3165b7db9f6b25cc502f1f23b1"
+    },
+    "town.wasm": {
+      "bytes": 298247,
+      "sha256": "3d10e458502bded5db96482af59fdd90f5eda2825f220be0e7cda92ddfc9ad2f"
+    },
+    "boot-config.js": {
+      "bytes": 178696,
+      "sha256": "ebb5007647f95b4be8e08eb484755ab4457be3670832b6efd9f817017274cda5"
+    },
+    "town.js": {
+      "bytes": 159569,
+      "sha256": "e59700d52c7eba4f9db581aff4291875a9d15fb257af88af1a610c10f995fd09"
+    },
+    "THIRD_PARTY_NOTICES.txt": {
+      "bytes": 12377,
+      "sha256": "9190821ba3134158de732cfb6b938a2d9f710da5492c6c582ba4964b4d7bb455"
+    },
+    "town.data": {
+      "bytes": 70009613,
+      "sha256": "91552220ad0fc11bb7ee4f48f048ff939e82e3199094876689040edccf5c1686"
+    },
+    "loader.js": {
+      "bytes": 6615,
+      "sha256": "523e1e52af21da729c213ee3fc8035a5c2f6ec739567c9feff1df7dbc04fb194"
+    }
+  }
+}

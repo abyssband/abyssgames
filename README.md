@@ -28,10 +28,17 @@ Version 2026.09.28.2 adds browser-language detection and a persistent Traditiona
 
 ## Town renderer preview
 
-`play/town/2026.10.05.1/` is a versioned WebGL 2 town imaging release. Source
-remains in Abyss Engine / Forge revision `228d4504fef3e5a7c8feadaf61d71d16a763f061`.
+`play/town/2026.10.05.2/` is a versioned WebGL 2 town imaging release. Source
+remains in Abyss Engine / Forge revision `aa84f2438c16e3697b3fabcffdf616e4cd80077f`.
 Every visible application control/readout uses UI Maker and Behavior; the HTML
 shell hosts canvases only. `release.json` records exact public file hashes.
 The release contains no source maps, development receipts, local saves or unused
 C/header/Abyss authoring sources. Performance acceptance and full gameplay remain
 pending. Update this versioned path only by an explicit replacement release.
+
+Version 2026.10.05.2 adds a pre-runtime loading screen exported from UI Maker,
+real download progress, initialization stages and Retry. Model parsing and GPU
+uploads yield between batches. A verified cache holds one package, at most
+96 MiB decoded, keyed by both WASM/data hashes; denied storage or eviction falls
+back to HTTP. Cache access does not touch player saves. Initial delivery still
+uses GitHub Pages gzip. The previous version remains at its versioned URL.
