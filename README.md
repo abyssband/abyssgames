@@ -72,3 +72,18 @@ new ambient chats. The existing outdoor-preview limitations still apply.
 Chromium and WebKit passed 19 gameplay checks each; native Debug CTest passed
 both town and navigation tests. Runtime packages and test revisions are recorded
 in the retained engine release evidence. Older version URLs stay intact.
+
+## Town mobile and conversation update
+
+`play/town/2026.10.06.1/` uses Forge source
+`9ba621a0260b2772aced3bbaa8156d9b8713c250`. Portrait controls are anchored
+to the bottom with touch-sized buttons and a compact selected-target card.
+The camera defaults to Medium; a main-view button cycles Far, Close and Medium.
+Head-anchored UI Maker speech bubbles now render fractional coordinates.
+Six coherent bilingual conversation topics add 18 lines. Companion follow speed
+tracks the human running capability and movement multiplier, with refreshed
+pursuit targets and shorter arrival pauses.
+
+The existing loading/cache pipeline and outdoor-preview limitations remain.
+Browser checks use headless Chromium/WebKit, including a 390px portrait viewport;
+physical iPhone Safari acceptance is separate. Older version URLs remain intact.

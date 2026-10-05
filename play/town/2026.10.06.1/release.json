@@ -1,0 +1,57 @@
+{
+  "version": "2026.10.06.1",
+  "source_revision": "9ba621a0260b2772aced3bbaa8156d9b8713c250",
+  "runtime": "WebGL2 / WebAssembly / C Behavior / Jolt5.6.0",
+  "objects": 405,
+  "models": 100,
+  "actors": 5,
+  "ui": "Abyss UI Maker",
+  "controls": {
+    "player": "resident-02",
+    "locale": "en",
+    "speed_multiplier": 2,
+    "camera_zoom": [
+      0.48,
+      0.34,
+      0.24
+    ],
+    "camera_default": 1,
+    "camera_control": "Main-view cycle button",
+    "portrait": "Responsive bottom dock with touch targets"
+  },
+  "scope": "Outdoor interactive preview; interior entry, paired assistance, audio and physical mobile acceptance pending.",
+  "files": {
+    "index.html": {
+      "bytes": 761,
+      "sha256": "377c4e35db92f740bb0671177d9b225b94935666257164963b606d7b19c37b46"
+    },
+    "shell.js": {
+      "bytes": 8108,
+      "sha256": "d137388843dc458c967bbe2e62e410f2aefe003fd2584a9eb84cd1545634c37f"
+    },
+    "loader.js": {
+      "bytes": 6615,
+      "sha256": "523e1e52af21da729c213ee3fc8035a5c2f6ec739567c9feff1df7dbc04fb194"
+    },
+    "boot-config.js": {
+      "bytes": 178696,
+      "sha256": "2e9291687ce44a6aee83e4658774abb658bb085e2ede5f12e40b1b6eec49a223"
+    },
+    "town.js": {
+      "bytes": 152895,
+      "sha256": "503bf7655ff04e96636c0bc8dcf884ff05497ca5927b89ee316b82b56785a589"
+    },
+    "town.wasm": {
+      "bytes": 1370070,
+      "sha256": "375a41a45cbaa557b8f5c24e6f09e7268d43cf34ae27500ee6bdaf38814f0d33"
+    },
+    "town.data": {
+      "bytes": 56105415,
+      "sha256": "42b43151ad017e800a9cdb57b0b02f25a46bb69356f0ffce625603b9d6b759eb"
+    },
+    "THIRD_PARTY_NOTICES.txt": {
+      "bytes": 13431,
+      "sha256": "3e99397a8bb2d4210233ef7b32e078c1dc884fbe4b67d11767174cf323244855"
+    }
+  }
+}
