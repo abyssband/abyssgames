@@ -102,3 +102,16 @@ follow/wait carry over; interiors, paired assistance and audio are still pending
 Chromium and WebKit passed startup (9), gameplay (22) and effects (8) checks
 headlessly; physical iPhone Safari acceptance is separate. Older version URLs
 remain intact.
+
+## Town showcase and portrait framing 2026.10.08.2
+
+`play/town/` is the town's showcase page: what you can do, the controls, how it
+is made, captures from the released build and every version so far. It always
+links to the latest version.
+
+`play/town/2026.10.08.2/` uses Forge source
+`66c438e3282a0fbbaec6ec4f1a2937aedfe70c54`. Screens narrower than 0.8
+width/height widen the view (by up to 1/0.6), so a phone sees the street around
+the player instead of the well and one wall; desktop framing is unchanged.
+Chromium and WebKit again passed startup (9), gameplay (22) and effects (8)
+checks headlessly.

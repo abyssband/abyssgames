@@ -1,0 +1,59 @@
+{
+  "version": "2026.10.08.2",
+  "source_revision": "66c438e3282a0fbbaec6ec4f1a2937aedfe70c54",
+  "runtime": "WebGL2 / WebAssembly / C Behavior / Jolt5.6.0",
+  "objects": 405,
+  "models": 100,
+  "actors": 5,
+  "ui": "Abyss UI Maker",
+  "controls": {
+    "player": "resident-02",
+    "locale": "en",
+    "speed_multiplier": 2,
+    "camera_zoom": [
+      0.48,
+      0.34,
+      0.24
+    ],
+    "camera_default": 1,
+    "camera_control": "Main-view cycle button",
+    "portrait": "Responsive bottom dock with touch targets",
+    "effects": "Wind and Water switches in the menu (84 swaying instances, terrain water)",
+    "framing": "Portrait screens narrower than 0.8 width/height widen the view by up to 1/0.6"
+  },
+  "scope": "Outdoor interactive preview; interior entry, paired assistance, audio and physical mobile acceptance pending.",
+  "files": {
+    "index.html": {
+      "bytes": 761,
+      "sha256": "377c4e35db92f740bb0671177d9b225b94935666257164963b606d7b19c37b46"
+    },
+    "shell.js": {
+      "bytes": 9232,
+      "sha256": "b10357078209aefbab6b85fa7a742a971768119c3ff8fe35b185cc81f4a2fa0c"
+    },
+    "loader.js": {
+      "bytes": 6615,
+      "sha256": "523e1e52af21da729c213ee3fc8035a5c2f6ec739567c9feff1df7dbc04fb194"
+    },
+    "boot-config.js": {
+      "bytes": 178696,
+      "sha256": "a990d7c04aeac876863418483519c1d8842e8cce4d4054eef8d2de3fc094495d"
+    },
+    "town.js": {
+      "bytes": 152802,
+      "sha256": "f8da64661b4ce957fe313a7392b08de829603ee0d2eb761e3020ad5023a13c21"
+    },
+    "town.wasm": {
+      "bytes": 1372381,
+      "sha256": "2080653cd6f296de2e379d1827789d90d47d2c76a4fcccbaea83169c23da9b67"
+    },
+    "town.data": {
+      "bytes": 56129825,
+      "sha256": "3e125a41991670a3fa620717bce588a9914e6ebd130eb222c0ac6f71d0b8eff1"
+    },
+    "THIRD_PARTY_NOTICES.txt": {
+      "bytes": 13431,
+      "sha256": "3e99397a8bb2d4210233ef7b32e078c1dc884fbe4b67d11767174cf323244855"
+    }
+  }
+}
