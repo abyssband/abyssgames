@@ -87,3 +87,18 @@ pursuit targets and shorter arrival pauses.
 The existing loading/cache pipeline and outdoor-preview limitations remain.
 Browser checks use headless Chromium/WebKit, including a 390px portrait viewport;
 physical iPhone Safari acceptance is separate. Older version URLs remain intact.
+
+## Town wind and water update
+
+`play/town/2026.10.08.1/` uses Forge source
+`deb76b4f9713bd9b3662b1aab4d7274fa811684e`. Trees, crops and grass sway in a
+GPU wind drawn in both the visible and shadow passes (84 authored swaying
+objects), and the water painted into the terrain gets procedural ripples, highlights
+and foam. Wind and Water are UI Maker switches in the menu. UI drawing and
+pointer picking share one viewport mapping, so touch targets line up on narrow
+screens. The same 405-object outdoor town, residents, conversations and pet
+follow/wait carry over; interiors, paired assistance and audio are still pending.
+
+Chromium and WebKit passed startup (9), gameplay (22) and effects (8) checks
+headlessly; physical iPhone Safari acceptance is separate. Older version URLs
+remain intact.
